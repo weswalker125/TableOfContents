@@ -157,7 +157,8 @@
 			
 			// If no id exisits, create a unique one
 			if(id == ""){
-				id = base.buildSlug($(element).text());
+				//WW EDIT: the header text may not be unique on its own, prefix with the index to ensure uniqueness (and general consistency)
+				id = base.buildSlug(index + " " + $(element).text()); 
 				element.id = id;
 			};
 			
